@@ -1,0 +1,15 @@
+name: anomalies
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - numpy
+  - pandas
+  - scikit-learn
+  - pyarrow
+  - matplotlib
+  - seaborn
+  - pip
+  - pip:
+      - jupyterlab

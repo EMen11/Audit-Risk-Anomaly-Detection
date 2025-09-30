@@ -1,0 +1,7 @@
+# Minimal dependencies if someone prefers pip/venv instead of conda
+numpy
+pandas
+scikit-learn
+pyarrow
+matplotlib
+seaborn
