@@ -150,9 +150,10 @@ The dashboard is intentionally simple and **auditor-friendly**: it separates *tu
 ---
 
 ### Screenshots (optional)
-- `docs/img/threshold_high.png` — high threshold (low workload, higher precision)  
-- `docs/img/threshold_low.png` — low threshold (higher recall, higher workload)  
-- `docs/img/volume_trends.png` — volume breakdown and trends  
+- `docs/img/threshold_high.jpeg` — high threshold (low workload, higher precision)  
+- `docs/img/threshold_low.jpeg` — low threshold (higher recall, higher workload)  
+- `docs/img/volume_trends.jpeg` — volume breakdown and trends  
+
 
 ---
 
