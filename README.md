@@ -24,6 +24,7 @@ A compact, reproducible pipeline that **generates transactional data**, **scores
 │ └─ anomaly_detector.py # feature eng, rules, Isolation Forest, metrics, exports
 ├─ exports/ # auto-created; contains run_* subfolders
 ├─ run_exports_demo.py # optional launcher/orchestrator 
+├─ dashboard_anomalies.pbix
 └─ docs/img/ # screenshots for README 
 
 ```
