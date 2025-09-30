@@ -147,25 +147,28 @@ Two pages fed only by the exported CSVs:
 
 The dashboard is intentionally simple and **auditor-friendly**: it separates *tuning* (page 1) from *operational monitoring* (page 2).
 
----
-
-### Screenshots (optional)
-- `docs/img/threshold_high.jpeg` — high threshold (low workload, higher precision)  
-- `docs/img/threshold_low.jpeg` — low threshold (higher recall, higher workload)  
-- `docs/img/volume_trends.jpeg` — volume breakdown and trends  
-
 
 ---
 
-##  Results snapshot (from the latest run in the screenshots)
+##  Results 
+
+**High threshold (low workload, higher precision)**
+![Threshold High](docs/img/threshold_high.JPEG)
+
 
 **Threshold high (≈ 0.77)**  
 - **ML**: Precision **27.50%**, Recall **7.19%**, Workload **0.50%**  
 - **Heuristic**: Precision **1.99%**, Recall **98.04%**, Workload **94.26%**  
 
+**Low threshold (higher recall, higher workload)**
+![Threshold Low](docs/img/threshold_low.JPEG)
+
 **Threshold low (≈ 0.34)**  
 - **ML**: Precision **4.69%**, Recall **49.02%**, Workload **19.99%**  
 - **Heuristic**: Precision **1.97%**, Recall **98.04%**, Workload **95.23%**  
+
+**Volume breakdown and trends**
+![Volume Trends](docs/img/volume_trends.JPEG)
 
 **Operational view**  
 - **Total anomalies**: **153** (Rate **1.91%**)  
