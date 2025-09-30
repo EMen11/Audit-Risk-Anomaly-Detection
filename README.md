@@ -236,17 +236,13 @@ The repo also includes **screenshots** for quick viewing if you don’t want to 
 
 ---
 
-## Parameters / CLI
+## Conclusion
 
-```bash
-python src/anomaly_detector.py \
-  --data <path/to/transactions_synth.csv> \
-  --seed 42 \
-  --default_threshold 0.85
---data (optional): if omitted, the script auto-uses the latest dataset; if none exists, it generates one.
+This project demonstrates how **hybrid anomaly detection (ML + rules)** can be made both
+**auditable** and **operational**. By combining explainability, cost-aware metrics, and
+a reproducible Python-to-Power BI pipeline, it provides a practical example of how
+AI/IT solutions can support **digital assurance and audit efficiency**.
 
---default_threshold: used to compute the global confusion table
-```
 
 
 
