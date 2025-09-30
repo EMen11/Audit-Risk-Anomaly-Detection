@@ -24,7 +24,9 @@ A compact, reproducible pipeline that **generates transactional data**, **scores
 │ └─ anomaly_detector.py # feature eng, rules, Isolation Forest, metrics, exports
 ├─ exports/ # auto-created; contains run_* subfolders
 ├─ run_exports_demo.py # optional launcher/orchestrator 
-├─ dashboard_anomalies.pbix
+├─ dashboard_anomalies.pbix # Power BI dashboard
+├─ environment.yml  # full conda environment
+├─ requirements.txt # minimal pip fallback
 └─ docs/img/ # screenshots for README 
 
 ```
@@ -34,11 +36,11 @@ A compact, reproducible pipeline that **generates transactional data**, **scores
 
 ## Quick start
 
-### 1) Environment
+### 1) Environment (conda)
 
 ```bash
-python -m venv .venv && source .venv/bin/activate  # (or conda)
-pip install -U numpy pandas scikit-learn pyarrow
+conda env create -f environment.yml
+conda activate anomalies
 ```
 ### 2) Generate a dataset
 
