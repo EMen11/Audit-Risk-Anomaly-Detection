@@ -153,13 +153,23 @@ The dashboard is intentionally simple and **auditor-friendly**: it separates *tu
 
 ##  Results 
 
+## Results 
+
 **High threshold (low workload, higher precision)**
 ![Threshold High](docs/img/threshold_high.JPEG)
-
 
 **Threshold high (≈ 0.77)**  
 - **ML**: Precision **27.50%**, Recall **7.19%**, Workload **0.50%**  
 - **Heuristic**: Precision **1.99%**, Recall **98.04%**, Workload **94.26%**  
+
+At this level, the system is **very selective**: only the most obvious anomalies are flagged.  
+This means:
+- **Precision increases** → most ML alerts are relevant.  
+- **Recall drops** → many anomalies go undetected.  
+- **Workload is minimal** → only a tiny fraction of transactions are sent for review.  
+This setup is useful when audit teams want to focus on **quality over quantity**, with very limited review capacity.
+
+---
 
 **Low threshold (higher recall, higher workload)**
 ![Threshold Low](docs/img/threshold_low.JPEG)
@@ -168,18 +178,31 @@ The dashboard is intentionally simple and **auditor-friendly**: it separates *tu
 - **ML**: Precision **4.69%**, Recall **49.02%**, Workload **19.99%**  
 - **Heuristic**: Precision **1.97%**, Recall **98.04%**, Workload **95.23%**  
 
+Here the model is **much more permissive**:  
+- **Recall increases** significantly (almost half of true anomalies are caught by ML).  
+- **Precision drops** sharply → many false positives enter the pipeline.  
+- **Workload rises** → ~20% of transactions must be reviewed by humans.  
+This setup favors **coverage and risk detection** over efficiency, which may overwhelm auditors.
+
+---
+
 **Volume breakdown and trends**
 ![Volume Trends](docs/img/volume_trends.JPEG)
 
 **Operational view**  
 - **Total anomalies**: **153** (Rate **1.91%**)  
 - Detection breakdown: mostly **Rules-only**, some **ML-only**, tiny **Overlap**  
-- **Channel**: `web` highest volume; others follow (`atm`, `app`, `branch`)  
-- **Trend**: one clear spike late Feb; otherwise low, stable counts  
+- **Channel**: `web` generates the highest anomaly volume; followed by `atm`, `app`, then `branch`  
+- **Trend**: one clear spike on **15 February** with **27 anomalies detected in a single day**, possibly linked to a **batch effect or unusual event**.  
+  Outside of this spike, anomalies remain **stable and low** across the period.  
 
-> **Takeaway**: Rules give broad coverage (**recall ~98%**) but at very high workload.  
-> ML lets you **trade workload for precision** and capture **ML-only** patterns.  
-> The **hybrid decision** keeps explainability while improving efficiency.  
+---
+
+> **Takeaway**  
+> - Rules provide **broad coverage (~98% recall)** but at the cost of **very high workload**.  
+> - ML enables a **trade-off**: by tuning the threshold, you can decide between catching more anomalies (high recall, high workload) or focusing on fewer, higher-quality cases (high precision, low workload).  
+> - The **hybrid approach** combines transparency (rules) with adaptability (ML), making it suitable for **audit environments** where efficiency and explainability are both critical.  
+
 
 ---
 
