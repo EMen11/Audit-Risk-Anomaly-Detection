@@ -1,0 +1,6 @@
+anomaly_type,precision,recall,f1,support,tp,fp,fn,tn
+BURST,1.0,1.0,1.0,25,25,0,0,0
+DUPLICATE,1.0,1.0,1.0,24,24,0,0,0
+HIGH_AMOUNT,1.0,1.0,1.0,40,40,0,0,0
+IMPOSSIBLE_TRAVEL,1.0,1.0,1.0,24,24,0,0,0
+ODD_HOUR,1.0,0.925,0.961038961038961,40,37,0,3,0
