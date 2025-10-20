@@ -153,7 +153,6 @@ The dashboard is intentionally simple and **auditor-friendly**: it separates *tu
 
 ---
 
-##  Results 
 
 ## Results 
 
